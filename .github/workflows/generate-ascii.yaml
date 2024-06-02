@@ -9,7 +9,7 @@ jobs:
               run: sudo apt-get install cowsay -y
 
             - name: Execute Cowsay CMD
-              run: cowsay -f biohazard "The T-virus is protean, changing from liquid to airborne to blood transmission, depending on its environment. It is almost impossible to kill." >> redqueen.txt
+              run: cowsay -f biohazard.cow "The T-virus is protean, changing from liquid to airborne to blood transmission, depending on its environment. It is almost impossible to kill." >> redqueen.txt
 
             - name: Test File Existence
               run: grep -i "redqueen" redqueen.txt
