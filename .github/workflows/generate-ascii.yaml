@@ -12,12 +12,7 @@ jobs:
               run: cowsay -f tux "The T-virus is protean, changing from liquid to airborne to blood transmission, depending on its environment. It is almost impossible to kill." >> tux.txt
 
             - name: Test File Existence
-<<<<<<< HEAD
               run: grep -i "virus" tux.txt
-=======
-              run: grep -i "virus" dragon.txt
->>>>>>> 4db82d463eb7fb2efa1ba2cfa51f1ddf080fc7f5
-
             - name: Read File
               run: cat tux.txt
 
