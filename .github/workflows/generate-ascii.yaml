@@ -12,7 +12,7 @@ jobs:
               run: cowsay -f dragon "The T-virus is protean, changing from liquid to airborne to blood transmission, depending on its environment. It is almost impossible to kill." >> dragon.txt
 
             - name: Test File Existence
-              run: grep -i "dragon" dragon.txt
+              run: grep -i "virus" dragon.txt
 
             - name: Read File
               run: cat dragon.txt
