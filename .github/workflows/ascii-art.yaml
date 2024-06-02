@@ -8,6 +8,9 @@ jobs:
             - name: Checkout Repo
               uses: actions/checkout@v4
 
+            - name: Setting Permissions
+              run: chmod +x .github/workflows/ascii-script.sh
+
             - name: Executing shell script
               run: .github/workflows/ascii-script.sh
 
