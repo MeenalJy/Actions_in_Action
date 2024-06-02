@@ -1,0 +1,18 @@
+name: Multiple Commands
+on: push
+jobs:
+    my-commands:
+        name: My Commands list
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+              
+            - name: Multiple commands in multi-line
+              run: |
+               echo "Hello World"
+               ls -ltra
+               echo "Delhi Summer is just like a bad haircut —you wanted it, but now you're crying and questioning all your life choices." >> summertime.txt
+               ls -ltra
+               grep -i "crying" summertime.txt
+               cat README.md
