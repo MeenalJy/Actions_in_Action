@@ -9,13 +9,13 @@ jobs:
               run: sudo apt-get install cowsay -y
 
             - name: Execute Cowsay CMD
-              run: cowsay -f cowfee "The T-virus is protean, changing from liquid to airborne to blood transmission, depending on its environment. It is almost impossible to kill." >> redqueen.txt
+              run: cowsay -f dragon "The T-virus is protean, changing from liquid to airborne to blood transmission, depending on its environment. It is almost impossible to kill." >> dragon.txt
 
             - name: Test File Existence
-              run: grep -i "redqueen" redqueen.txt
+              run: grep -i "dragon" dragon.txt
 
             - name: Read File
-              run: cat redqueen.txt
+              run: cat dragon.txt
 
             - name: List files
               run: ls -ltra
