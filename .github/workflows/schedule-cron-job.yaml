@@ -18,6 +18,6 @@ jobs:
       # Run the custom shell script
       - name: Run the custom shell script
         run: |
-          chmod +x ./fun-cron-script.sh
-          ./fun-cron-script.sh
+          chmod +x .github/workflows/fun-cron-script.sh
+          .github/workflows/fun-cron-script.sh/fun-cron-script.sh
 
