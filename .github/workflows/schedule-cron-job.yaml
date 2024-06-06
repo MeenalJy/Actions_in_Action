@@ -2,6 +2,7 @@ name: Cron Job Workflow
 on:
     schedule:
         - cron: 1 * * * *
+    push:
 jobs:
     my-cron-job:
         runs-on: ubuntu-latest
