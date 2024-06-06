@@ -1,7 +1,7 @@
 name: Cron Job Workflow
 on:
     schedule:
-        - cron: 1 * * * *
+        - cron: '1 * * * *'
     push:
 jobs:
     my-cron-job:
