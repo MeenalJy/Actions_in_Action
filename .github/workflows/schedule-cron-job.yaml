@@ -1,16 +1,23 @@
-name: Cron Job Workflow
-on:
-    schedule:
-        - cron: '1 * * * *'
-    push:
-jobs:
-    my-cron-job:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout Repo
-              uses: actions/checkout@v4
+name: Scheduled Cron Job
 
-            - name: Execute the shell script
-              run: |
-                chmod +x .github/workflows/fun-cron-script.sh
-                .github/workflows/fun-cron-script.sh/fun-cron-script.sh
+on:
+  schedule:
+    # Runs at 00:00 UTC on the first day of every month
+    - cron: '0 0 1 * *'
+  workflow_dispatch: # Allows manual trigger for testing
+
+jobs:
+  run-cron-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository to the GitHub runner
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Run the custom shell script
+      - name: Run the custom shell script
+        run: |
+          chmod +x ./fun-cron-script.sh
+          ./fun-cron-script.sh
+
